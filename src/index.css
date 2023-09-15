@@ -11,3 +11,9 @@ body {
 .view-flex{
   display: flex;
 }
+
+@media (max-width: 768px) {
+.view-flex{
+flex-direction: column;
+}
+}

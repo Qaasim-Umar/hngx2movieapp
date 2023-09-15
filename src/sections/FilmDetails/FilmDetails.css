@@ -26,6 +26,9 @@
 .movie-about {
   color: #333333;
 }
+.button1{
+  margin-top: 5rem;
+}
 .button1,
 .button2 {
   width: 250px;
@@ -43,4 +46,22 @@
   color: black;
   background-color: #fac9d5;
   padding: 0.55rem;
+}
+
+@media (max-width: 768px) {
+
+  .head-flex{
+    flex-direction: column;
+  }
+
+  .filmdetails-container {
+    padding: 0;
+  }
+  .video-container {
+    width: 100vw;
+  }
+  .button1{
+    margin-top: 1rem;
+  }
+  
 }

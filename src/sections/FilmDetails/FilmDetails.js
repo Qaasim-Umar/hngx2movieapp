@@ -89,10 +89,6 @@ const FilmDetails = () => {
             </button>
           </div>
         </div>
-
-        <div>
-          <div></div>
-        </div>
       </div>
     </div>
   );
