@@ -1,24 +1,36 @@
-.featuredmovie-container{
-    
+.list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  padding: 0 2rem;
 }
-.list{
-    list-style-type:none;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-   justify-items: center;
-   padding: 0 2rem;
-   
+.movie-title {
+  font-weight: 600;
+  max-width: 16rem;
 }
-.card{
-    border: 2px red solid;
+.featuredmovie-container {
+padding: 1rem;
 }
-.movie-title{
-font-weight: 600;
-max-width: 16rem;
+.featuredmovie-heading{
+    margin-left: 6.5rem;
 }
-.release-date{
-    color: rgb(68, 67, 67);
+.release-date {
+  color: rgb(68, 67, 67);
 }
-.movie-image{
-    height: 24rem;
+.movie-image {
+  height: 24rem;
+}
+@media (max-width: 768px) {
+
+    .list {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .featuredmovie-heading{
+       margin-left:2rem ;
+    }
+    .featuredmovie-container {
+        padding: 0;
+        }
 }

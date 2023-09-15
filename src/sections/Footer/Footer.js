@@ -4,6 +4,7 @@ import facebook from './Vector (3).svg'
 import instagram from './Vector (4).svg'
 import twitter from './Vector (5).svg'
 import youtube from './Vector (6).svg'
+
 const Footer = () => {
   return (
     <div className='footer-container'>
@@ -20,7 +21,7 @@ const Footer = () => {
             <p>Press Room</p>
         </div>
         
-        <p className='footer-year'>@2021 MovieBox by Adriana Eka Prayudha</p>
+        <p className='footer-year'>&copy; 2021 MovieBox by Adriana Eka Prayudha</p>
         
         </div>
   )

@@ -20,3 +20,13 @@
   color: #6b7280;
   
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    display: block;
+
+  }
+  .footertext-flex {
+    display: block;
+  }
+}

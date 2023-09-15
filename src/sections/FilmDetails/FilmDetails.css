@@ -1,0 +1,46 @@
+.filmdetails-container {
+  padding: 1.5rem;
+}
+.video-container {
+  width: 80vw;
+}
+
+.title-flex {
+  display: flex;
+  gap: 1rem;
+}
+.details-img{
+  height: 22rem;
+}
+.head-flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.video-container img {
+  width: 100%;
+  object-fit: contain;
+}
+.movie-about {
+  color: #333333;
+}
+.button1,
+.button2 {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #be123c;
+  gap: 1rem;
+  border-radius: 10px;
+  border: none;
+  padding: 0.4rem;
+}
+.button2 {
+  color: black;
+  background-color: #fac9d5;
+  padding: 0.55rem;
+}

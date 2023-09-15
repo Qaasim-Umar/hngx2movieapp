@@ -1,0 +1,40 @@
+.sidebar-container{
+    border: 2px solid red;
+    width: 20vw;
+    /* width: 306px; */
+    padding: 1rem 0;
+    border-radius: 0px 45px 45px 0px;
+}
+.logo{
+    margin: 1rem;
+}
+
+.sideicon-flex{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem 2rem;
+}
+
+.link{
+    text-decoration: none;
+}
+.sideicon-flex-moive{
+    display: flex;
+    gap: 1rem;
+    color: #BE123C;
+    margin-bottom: 1.5rem;
+    padding: .5rem 2.25rem;
+    background-color: #ffd0dc;
+}
+.sideicon-flexs{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 8rem;
+    padding: .5rem 2rem;
+}
+
+.sideicon-flex:hover, .sideicon-flexs:hover {
+background-color: red;
+}
