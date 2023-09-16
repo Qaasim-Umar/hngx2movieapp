@@ -4,30 +4,36 @@
 .video-container {
   width: 80vw;
 }
-
 .title-flex {
   display: flex;
   gap: 1rem;
 }
-.details-img{
+.details-img {
   height: 22rem;
 }
 .head-flex {
-  display: flex;
   gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem;
 }
 .video-container img {
   width: 100%;
   object-fit: contain;
 }
+.overview-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+}
 .movie-about {
   color: #333333;
 }
-.button1{
-  margin-top: 5rem;
+.runtime {
+  margin-right: 2rem;
+}
+.runtime-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .button1,
 .button2 {
@@ -47,21 +53,19 @@
   background-color: #fac9d5;
   padding: 0.55rem;
 }
-
 @media (max-width: 768px) {
-
-  .head-flex{
-    flex-direction: column;
+  .head-flex {
   }
-
   .filmdetails-container {
     padding: 0;
   }
   .video-container {
     width: 100vw;
   }
-  .button1{
-    margin-top: 1rem;
+  .overview-flex {
+    flex-direction: column;
   }
-  
+  .runtime {
+    margin-right: 0;
+  }
 }

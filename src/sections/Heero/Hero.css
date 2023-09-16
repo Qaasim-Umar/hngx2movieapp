@@ -7,6 +7,7 @@
   background: transparent;
   height: 2rem;
   width: 425px;
+  color: white;
   border-radius: 6px;
   border: 2px solid #d1d5db;
 }
@@ -65,42 +66,39 @@ form {
   align-items: center;
   border-radius: 6px;
 }
-
 @media (max-width: 768px) {
-.search{
-  width: 165px;
-}
-
-.hero-container {
-  height: 90vh;
-  background-size: cover;
-}
-.hero-details {
-  padding-left: 1rem;
-  width: 344px;
-}
-::placeholder {
-  color: white;
-  font-size: 10px;
-  padding: 0.4rem;
-}
-.tvlogo {
-  height: 1.8rem;
-}
-.herologo {
-  gap: 0.2rem;
-}
-.navbar-header {
-  padding: 0rem;
-
-}
-.herosignin{
-  font-size: 14px;
-}
-.sign-in{
-  gap: .3rem;
-}
-b{
-  font-size: 14px;
-}
+  .search {
+    width: 169px;
+  }
+  .hero-container {
+    height: 90vh;
+    background-size: cover;
+  }
+  .hero-details {
+    padding-left: 1rem;
+    width: 344px;
+  }
+  ::placeholder {
+    color: white;
+    font-size: 10px;
+    padding: 0.4rem;
+  }
+  .tvlogo {
+    height: 1.8rem;
+  }
+  .herologo {
+    gap: 0.15rem;
+  }
+  .navbar-header {
+    padding: 0rem;
+  }
+  .herosignin {
+    font-size: 14px;
+  }
+  .sign-in {
+    gap: 0.3rem;
+  }
+  b {
+    font-size: 14px;
+  }
 }

@@ -9,7 +9,6 @@ import React, { useEffect, useState } from "react";
 const FilmDetails = () => {
   const { id } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   //   Using params for dynamic routing
@@ -22,38 +21,29 @@ const FilmDetails = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=63ee159357e6b5a78c640c9765b97d27`
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          // Check if the response status is not OK (e.g., 404, 500)
+          throw new Error(`Failed to fetch data (Status: ${response.status})`);
+        }
+        return response.json();
+      })
       .then((data) => {
         setMovieDetails(data);
+      })
+      .catch((error) => {
+        setError(error.message);
+        // Set the error message in case of an error
       });
-
-    //     {
-
-    //         if (!response.ok) {
-    //           throw new Error('Network response was not ok');
-    //         }
-    //         return response.json();
-    //       })
-    // }
-
-    //   .then((data) => {
-    //     setMovieDetails(data);
-    //     setLoading(false);
-    //   })
-    //   .catch((err) => {
-    //     setError(err);
-    //     setLoading(false);
-    //   });
-    // }, [movieId]);
-
-    // if (loading) {
-    //     return <div>Loading...</div>;
-    //   }
-
-    //   if (error) {
-    //     return <div>Error: {error.message}</div>;
-    //   }
   };
+  // Check for errors and display an error message if one exists
+  if (error) {
+    return (
+      <div className="error-message">
+        <p>{error}</p>
+      </div>
+    );
+  }
 
   return (
     <div className="filmdetails-container">
@@ -61,32 +51,40 @@ const FilmDetails = () => {
         <div className="video-container">
           <img
             src={`https://image.tmdb.org/t/p/w500/${movieDetails.poster_path}`}
-           className="details-img"
+            className="details-img"
             alt=""
           />
         </div>
 
         <div className="head-flex">
           <div>
-            <div className="title-flex">
-              <p data-testid="movie-title">{movieDetails.title}</p>
-              <p data-testid="movie-release-date">{movieDetails.release_date}</p>
+            <div className="runtime-flex">
+              <div className="title-flex">
+                <p data-testid="movie-title">{movieDetails.title}</p>
+                <p data-testid="movie-release-date">
+                  {movieDetails.release_date}
+                </p>
+              </div>
+              <div className="runtime" data-testid="movie-runtime">{movieDetails.runtime} Minutes</div>
             </div>
-
-            <p className="movie-about">{movieDetails.overview}</p>
           </div>
 
-          <div>
-            <p>
-              <button className="button1">
+          <div className="overview-flex">
+            <p className="movie-about" data-testid="movie-overview">{movieDetails.overview}</p>
+            <div>
+              <p>
+                <button className="button1">
+                  {" "}
+                  <img src={Ticket} alt="" /> See Showtimes
+                </button>
+              </p>
+              <button className="button2">
                 {" "}
-                <img src={Ticket} alt="" /> See Showtimes
+                <img src={More} alt="" /> More watch Options{" "}
               </button>
-            </p>
-            <button className="button2">
-              {" "}
-              <img src={More} alt="" /> More watch Options{" "}
-            </button>
+
+            </div>
+
           </div>
         </div>
       </div>
