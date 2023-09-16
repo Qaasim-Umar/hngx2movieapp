@@ -24,7 +24,7 @@ To run the app locally, follow these steps:
 1. Clone this repository:
 
    ```bash
-  [https://github.com/Qaasim-Umar/hngx2movieapp.git]
+  https://github.com/Qaasim-Umar/hngx2movieapp.git
    ```
 
 2. Change to the project directory:
