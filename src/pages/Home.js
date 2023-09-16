@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import Hero from "../sections/Hero/Hero";
+import Hero from "../sections/Hero/Heero";
 import Footer from "../sections/Footer/Footer";
 import FeaturedMovie from "../sections/FeaturedMovie/FeaturedMovie";
 
